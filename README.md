@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://docs.oracle.com/en/java/javase/24/"><img src="https://img.shields.io/badge/Java-Release%2024-green"/></a>
+    <a href="https://docs.oracle.com/en/java/javase/25/"><img src="https://img.shields.io/badge/Java-Release%2025-green"/></a>
     <span>&nbsp;</span>
     <a href="https://jitpack.io/#io.github.teletha/bun4j"><img src="https://img.shields.io/jitpack/version/io.github.teletha/bun4j?label=Repository&color=green"></a>
     <span>&nbsp;</span>
@@ -57,7 +57,7 @@ Bun.bundle(o -> o.entry("src/index.tsx")
 
 
 ## Prerequisites
-Bun4j runs on all major operating systems and requires only [Java version 24](https://docs.oracle.com/en/java/javase/24/) or later to run.
+Bun4j runs on all major operating systems and requires only [Java version 25](https://docs.oracle.com/en/java/javase/25/) or later to run.
 To check, please run `java -version` on your terminal.
 <p align="right"><a href="#top">back to top</a></p>
 
