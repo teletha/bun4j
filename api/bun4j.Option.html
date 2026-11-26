@@ -19,10 +19,10 @@
 		<link href="https://cdn.jsdelivr.net/npm/ress@4.0.0/dist/ress.min.css" rel="stylesheet"/>
 		<link href="main.css" rel="stylesheet"/>
 	</head>
-	<body class="U">
-		<header class="V" date="2026-11-26">
-			<h1 class="a"><a href="index.html"><code>Bun4j</code></a></h1>
-			<nav class="b"><a href="api/main.html" id="API"><svg class="package">
+	<body class="O">
+		<header class="P" date="2026-11-26">
+			<h1 class="k"><a href="index.html"><code>Bun4j</code></a></h1>
+			<nav class="i"><a href="api/main.html" id="API"><svg class="package">
 						<use href="main.svg#package"/>
 					</svg>
 				</a><a href="doc/changelog.html" id="Activity"><svg class="activity">
@@ -35,18 +35,18 @@
 						<use href="main.svg#github"/>
 					</svg>
 				</a></nav>
-			<div class="c"><a aria-label="Change color scheme" id="theme"><svg class="sun">
+			<div class="f"><a aria-label="Change color scheme" id="theme"><svg class="sun">
 						<use href="main.svg#sun"/>
 					</svg><svg class="moon">
 						<use href="main.svg#moon"/>
 					</svg>
 				</a></div>
 		</header>
-		<nav class="Y"></nav>
-		<article class="W" id="Article">
-			<section class="r"><code class="AB">bun4j</code>
-				<h2 class="AbstractClass v"><code class="J">Option</code><code class="d">&lt;<code>Self</code>&gt;</code></h2>
-				<div class="f">
+		<nav class="S"></nav>
+		<article class="Q" id="Article">
+			<section class="p"><code class="U">bun4j</code>
+				<h2 class="AbstractClass w"><code class="a">Option</code><code class="o">&lt;<code>Self</code>&gt;</code></h2>
+				<div class="m">
 					<ul class="E F">
 						<li><code>Self</code><code class="extends"><code><a aria-label="bun4j.Option" href="api/bun4j.Option.html">Option</a><code class="parameters"><code>Self</code></code></code></code><span><p>The concrete option type.</p></span></li>
 					</ul>
@@ -59,309 +59,309 @@
 						<li><code><a aria-label="bun4j.internal.UpdateOption" href="api/bun4j.internal.UpdateOption.html">UpdateOption</a></code></li>
 					</ul>
 				</div><span class="A"><p>The common settings shared by all bun commands.</p></span></section>
-			<section class="r" id="directory">
-				<h2 class="o"><i class="PROTECTED"></i><code class="J">directory</code><i class="L"><code class="return"><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></h2><span class="A"><p>The working directory, or null to use the current directory.</p></span></section>
-			<section class="r" id="executable">
-				<h2 class="o"><i class="PROTECTED"></i><code class="J">executable</code><i class="L"><code class="return"><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></h2><span class="A"><p>The executable override, or null to use the detected bun.</p></span></section>
-			<section class="r" id="environment">
-				<h2 class="o"><i class="FINAL"><i class="PROTECTED"></i></i><code class="J">environment</code><i class="L"><code class="return"><a aria-label="java.util.Map 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html">Map</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></h2><span class="A"><p>Additional environment variables.</p></span></section>
-			<section class="r" id="stdout">
-				<h2 class="o"><i class="PROTECTED"></i><code class="J">stdout</code><i class="L"><code class="return"><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></h2><span class="A"><p>The listener which receives every line of the standard output.</p></span></section>
-			<section class="r" id="stderr">
-				<h2 class="o"><i class="PROTECTED"></i><code class="J">stderr</code><i class="L"><code class="return"><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></h2><span class="A"><p>The listener which receives every line of the standard error output.</p></span></section>
-			<section class="r" id="timeout">
-				<h2 class="o"><i class="PROTECTED"></i><code class="J">timeout</code><i class="L"><code class="return"><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code></i></h2><span class="A"><p>The maximum duration of the command.</p></span></section>
-			<section class="r" id="extra">
-				<h2 class="o"><i class="FINAL"><i class="PROTECTED"></i></i><code class="J">extra</code><i class="L"><code class="return"><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></h2><span class="A"><p>Extra arguments appended verbatim to the command line.</p></span></section>
-			<section class="r" id="Option()">
-				<h2 class="o"><i class="PUBLIC"></i><code class="J">Option</code><code class="d">()</code></h2>
+			<section class="p" id="directory">
+				<h2 class="V"><i class="PROTECTED"></i><code class="a">directory</code><i class="AB"><code class="return"><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></h2><span class="A"><p>The working directory, or null to use the current directory.</p></span></section>
+			<section class="p" id="executable">
+				<h2 class="V"><i class="PROTECTED"></i><code class="a">executable</code><i class="AB"><code class="return"><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></h2><span class="A"><p>The executable override, or null to use the detected bun.</p></span></section>
+			<section class="p" id="environment">
+				<h2 class="V"><i class="FINAL"><i class="PROTECTED"></i></i><code class="a">environment</code><i class="AB"><code class="return"><a aria-label="java.util.Map 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html">Map</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></h2><span class="A"><p>Additional environment variables.</p></span></section>
+			<section class="p" id="stdout">
+				<h2 class="V"><i class="PROTECTED"></i><code class="a">stdout</code><i class="AB"><code class="return"><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></h2><span class="A"><p>The listener which receives every line of the standard output.</p></span></section>
+			<section class="p" id="stderr">
+				<h2 class="V"><i class="PROTECTED"></i><code class="a">stderr</code><i class="AB"><code class="return"><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></h2><span class="A"><p>The listener which receives every line of the standard error output.</p></span></section>
+			<section class="p" id="timeout">
+				<h2 class="V"><i class="PROTECTED"></i><code class="a">timeout</code><i class="AB"><code class="return"><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code></i></h2><span class="A"><p>The maximum duration of the command.</p></span></section>
+			<section class="p" id="extra">
+				<h2 class="V"><i class="FINAL"><i class="PROTECTED"></i></i><code class="a">extra</code><i class="AB"><code class="return"><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></h2><span class="A"><p>Extra arguments appended verbatim to the command line.</p></span></section>
+			<section class="p" id="Option()">
+				<h2 class="V"><i class="PUBLIC"></i><code class="a">Option</code><code class="o">()</code></h2>
 			</section>
-			<section class="r" id="self()">
-				<h2 class="o"><i class="FINAL"><i class="PROTECTED"></i></i><code class="J">self</code><code class="d">()</code><i class="L"><code>Self</code></i></h2>
-				<table class="h">
-					<tr class="i">
+			<section class="p" id="self()">
+				<h2 class="V"><i class="FINAL"><i class="PROTECTED"></i></i><code class="a">self</code><code class="o">()</code><i class="AB"><code>Self</code></i></h2>
+				<table class="r">
+					<tr class="j">
 						<td><code>Self</code></td>
 						<td><span><p>This instance.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Returns this instance as the concrete option type.</p></span></section>
-			<section class="r" id="directory(java.lang.String)">
-				<h2 class="o"><i class="FINAL"><i class="PUBLIC"></i></i><code class="J">directory</code><code class="d">(<code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">path</code>)</code><i class="L"><code>Self</code></i></h2>
-				<table class="h">
-					<tr class="z">
+			<section class="p" id="directory(java.lang.String)">
+				<h2 class="V"><i class="FINAL"><i class="PUBLIC"></i></i><code class="a">directory</code><code class="o">(<code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">path</code>)</code><i class="AB"><code>Self</code></i></h2>
+				<table class="r">
+					<tr class="K">
 						<td><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">path</code></td>
 						<td><span><p>A directory path.</p></span></td>
 					</tr>
-					<tr class="i">
+					<tr class="j">
 						<td><code>Self</code></td>
 						<td><span><p>Chainable API.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Sets the working directory of the command.</p></span></section>
-			<section class="r" id="directory(java.nio.file.Path)">
-				<h2 class="o"><i class="FINAL"><i class="PUBLIC"></i></i><code class="J">directory</code><code class="d">(<code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">path</code>)</code><i class="L"><code>Self</code></i></h2>
-				<table class="h">
-					<tr class="z">
+			<section class="p" id="directory(java.nio.file.Path)">
+				<h2 class="V"><i class="FINAL"><i class="PUBLIC"></i></i><code class="a">directory</code><code class="o">(<code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">path</code>)</code><i class="AB"><code>Self</code></i></h2>
+				<table class="r">
+					<tr class="K">
 						<td><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">path</code></td>
 						<td><span><p>A directory path.</p></span></td>
 					</tr>
-					<tr class="i">
+					<tr class="j">
 						<td><code>Self</code></td>
 						<td><span><p>Chainable API.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Sets the working directory of the command.</p></span></section>
-			<section class="r" id="executable(java.lang.String)">
-				<h2 class="o"><i class="FINAL"><i class="PUBLIC"></i></i><code class="J">executable</code><code class="d">(<code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">path</code>)</code><i class="L"><code>Self</code></i></h2>
-				<table class="h">
-					<tr class="z">
+			<section class="p" id="executable(java.lang.String)">
+				<h2 class="V"><i class="FINAL"><i class="PUBLIC"></i></i><code class="a">executable</code><code class="o">(<code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">path</code>)</code><i class="AB"><code>Self</code></i></h2>
+				<table class="r">
+					<tr class="K">
 						<td><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">path</code></td>
 						<td><span><p>A path to an executable.</p></span></td>
 					</tr>
-					<tr class="i">
+					<tr class="j">
 						<td><code>Self</code></td>
 						<td><span><p>Chainable API.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Overrides the bun executable to use. Mainly useful for testing.</p></span></section>
-			<section class="r" id="executable(java.nio.file.Path)">
-				<h2 class="o"><i class="FINAL"><i class="PUBLIC"></i></i><code class="J">executable</code><code class="d">(<code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">path</code>)</code><i class="L"><code>Self</code></i></h2>
-				<table class="h">
-					<tr class="z">
+			<section class="p" id="executable(java.nio.file.Path)">
+				<h2 class="V"><i class="FINAL"><i class="PUBLIC"></i></i><code class="a">executable</code><code class="o">(<code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">path</code>)</code><i class="AB"><code>Self</code></i></h2>
+				<table class="r">
+					<tr class="K">
 						<td><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">path</code></td>
 						<td><span><p>A path to an executable.</p></span></td>
 					</tr>
-					<tr class="i">
+					<tr class="j">
 						<td><code>Self</code></td>
 						<td><span><p>Chainable API.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Overrides the bun executable to use. Mainly useful for testing.</p></span></section>
-			<section class="r" id="env(java.lang.String,java.lang.String)">
-				<h2 class="o"><i class="FINAL"><i class="PUBLIC"></i></i><code class="J">env</code><code class="d">(<code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">key</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">value</code>)</code><i class="L"><code>Self</code></i></h2>
-				<table class="h">
-					<tr class="z">
+			<section class="p" id="env(java.lang.String,java.lang.String)">
+				<h2 class="V"><i class="FINAL"><i class="PUBLIC"></i></i><code class="a">env</code><code class="o">(<code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">key</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">value</code>)</code><i class="AB"><code>Self</code></i></h2>
+				<table class="r">
+					<tr class="K">
 						<td><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">key</code></td>
 						<td><span><p>A variable name.</p></span></td>
 					</tr>
-					<tr class="z">
+					<tr class="K">
 						<td><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">value</code></td>
 						<td><span><p>A variable value.</p></span></td>
 					</tr>
-					<tr class="i">
+					<tr class="j">
 						<td><code>Self</code></td>
 						<td><span><p>Chainable API.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Adds an environment variable.</p></span></section>
-			<section class="r" id="stdout(java.util.function.Consumer)">
-				<h2 class="o"><i class="FINAL"><i class="PUBLIC"></i></i><code class="J">stdout</code><code class="d">(<code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">listener</code>)</code><i class="L"><code>Self</code></i></h2>
-				<table class="h">
-					<tr class="z">
+			<section class="p" id="stdout(java.util.function.Consumer)">
+				<h2 class="V"><i class="FINAL"><i class="PUBLIC"></i></i><code class="a">stdout</code><code class="o">(<code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">listener</code>)</code><i class="AB"><code>Self</code></i></h2>
+				<table class="r">
+					<tr class="K">
 						<td><code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">listener</code></td>
 						<td><span><p>A line listener.</p></span></td>
 					</tr>
-					<tr class="i">
+					<tr class="j">
 						<td><code>Self</code></td>
 						<td><span><p>Chainable API.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Sets the listener which is called for every line of the standard output.</p></span></section>
-			<section class="r" id="stderr(java.util.function.Consumer)">
-				<h2 class="o"><i class="FINAL"><i class="PUBLIC"></i></i><code class="J">stderr</code><code class="d">(<code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">listener</code>)</code><i class="L"><code>Self</code></i></h2>
-				<table class="h">
-					<tr class="z">
+			<section class="p" id="stderr(java.util.function.Consumer)">
+				<h2 class="V"><i class="FINAL"><i class="PUBLIC"></i></i><code class="a">stderr</code><code class="o">(<code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">listener</code>)</code><i class="AB"><code>Self</code></i></h2>
+				<table class="r">
+					<tr class="K">
 						<td><code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">listener</code></td>
 						<td><span><p>A line listener.</p></span></td>
 					</tr>
-					<tr class="i">
+					<tr class="j">
 						<td><code>Self</code></td>
 						<td><span><p>Chainable API.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Sets the listener which is called for every line of the standard error output.</p></span></section>
-			<section class="r" id="echo()">
-				<h2 class="o"><i class="FINAL"><i class="PUBLIC"></i></i><code class="J">echo</code><code class="d">()</code><i class="L"><code>Self</code></i></h2>
-				<table class="h">
-					<tr class="i">
+			<section class="p" id="echo()">
+				<h2 class="V"><i class="FINAL"><i class="PUBLIC"></i></i><code class="a">echo</code><code class="o">()</code><i class="AB"><code>Self</code></i></h2>
+				<table class="r">
+					<tr class="j">
 						<td><code>Self</code></td>
 						<td><span><p>Chainable API.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Prints both output streams to the console as they arrive.</p></span></section>
-			<section class="r" id="timeout(java.time.Duration)">
-				<h2 class="o"><i class="FINAL"><i class="PUBLIC"></i></i><code class="J">timeout</code><code class="d">(<code><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code><code class="parameterName">timeout</code>)</code><i class="L"><code>Self</code></i></h2>
-				<table class="h">
-					<tr class="z">
+			<section class="p" id="timeout(java.time.Duration)">
+				<h2 class="V"><i class="FINAL"><i class="PUBLIC"></i></i><code class="a">timeout</code><code class="o">(<code><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code><code class="parameterName">timeout</code>)</code><i class="AB"><code>Self</code></i></h2>
+				<table class="r">
+					<tr class="K">
 						<td><code><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code><code class="parameterName">timeout</code></td>
 						<td><span><p>A duration.</p></span></td>
 					</tr>
-					<tr class="i">
+					<tr class="j">
 						<td><code>Self</code></td>
 						<td><span><p>Chainable API.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Sets the maximum duration of the command.</p></span></section>
-			<section class="r" id="raw(java.lang.String...)">
-				<h2 class="o"><i class="FINAL"><i class="PUBLIC"></i></i><code class="J">raw</code><code class="d">(<code array="var"><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">arguments</code>)</code><i class="L"><code>Self</code></i></h2>
-				<table class="h">
-					<tr class="z">
+			<section class="p" id="raw(java.lang.String...)">
+				<h2 class="V"><i class="FINAL"><i class="PUBLIC"></i></i><code class="a">raw</code><code class="o">(<code array="var"><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">arguments</code>)</code><i class="AB"><code>Self</code></i></h2>
+				<table class="r">
+					<tr class="K">
 						<td><code array="var"><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">arguments</code></td>
 						<td><span><p>Additional arguments.</p></span></td>
 					</tr>
-					<tr class="i">
+					<tr class="j">
 						<td><code>Self</code></td>
 						<td><span><p>Chainable API.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Appends arguments verbatim to the command line. Use this for flags which bun4j does not
 expose yet.</p></span></section>
-			<section class="r" id="directory()">
-				<h2 class="o"><i class="FINAL"><i class="PUBLIC"></i></i><code class="J">directory</code><code class="d">()</code><i class="L"><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></h2>
-				<table class="h">
-					<tr class="i">
+			<section class="p" id="directory()">
+				<h2 class="V"><i class="FINAL"><i class="PUBLIC"></i></i><code class="a">directory</code><code class="o">()</code><i class="AB"><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></h2>
+				<table class="r">
+					<tr class="j">
 						<td><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></td>
 						<td><span><p>A directory, or null if the current directory is used.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Returns the working directory.</p></span></section>
-			<section class="r" id="executable()">
-				<h2 class="o"><i class="FINAL"><i class="PUBLIC"></i></i><code class="J">executable</code><code class="d">()</code><i class="L"><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></h2>
-				<table class="h">
-					<tr class="i">
+			<section class="p" id="executable()">
+				<h2 class="V"><i class="FINAL"><i class="PUBLIC"></i></i><code class="a">executable</code><code class="o">()</code><i class="AB"><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></h2>
+				<table class="r">
+					<tr class="j">
 						<td><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></td>
 						<td><span><p>A path, or null if the detected bun is used.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Returns the executable override.</p></span></section>
-			<section class="r" id="environment()">
-				<h2 class="o"><i class="FINAL"><i class="PUBLIC"></i></i><code class="J">environment</code><code class="d">()</code><i class="L"><code><a aria-label="java.util.Map 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html">Map</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></h2>
-				<table class="h">
-					<tr class="i">
+			<section class="p" id="environment()">
+				<h2 class="V"><i class="FINAL"><i class="PUBLIC"></i></i><code class="a">environment</code><code class="o">()</code><i class="AB"><code><a aria-label="java.util.Map 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html">Map</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></h2>
+				<table class="r">
+					<tr class="j">
 						<td><code><a aria-label="java.util.Map 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html">Map</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></td>
 						<td><span><p>A map of variables.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Returns the additional environment variables.</p></span></section>
-			<section class="r" id="stdout()">
-				<h2 class="o"><i class="FINAL"><i class="PUBLIC"></i></i><code class="J">stdout</code><code class="d">()</code><i class="L"><code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></h2>
-				<table class="h">
-					<tr class="i">
+			<section class="p" id="stdout()">
+				<h2 class="V"><i class="FINAL"><i class="PUBLIC"></i></i><code class="a">stdout</code><code class="o">()</code><i class="AB"><code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></h2>
+				<table class="r">
+					<tr class="j">
 						<td><code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></td>
 						<td><span><p>A listener.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Returns the standard output listener.</p></span></section>
-			<section class="r" id="stderr()">
-				<h2 class="o"><i class="FINAL"><i class="PUBLIC"></i></i><code class="J">stderr</code><code class="d">()</code><i class="L"><code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></h2>
-				<table class="h">
-					<tr class="i">
+			<section class="p" id="stderr()">
+				<h2 class="V"><i class="FINAL"><i class="PUBLIC"></i></i><code class="a">stderr</code><code class="o">()</code><i class="AB"><code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></h2>
+				<table class="r">
+					<tr class="j">
 						<td><code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></td>
 						<td><span><p>A listener.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Returns the standard error listener.</p></span></section>
-			<section class="r" id="timeout()">
-				<h2 class="o"><i class="FINAL"><i class="PUBLIC"></i></i><code class="J">timeout</code><code class="d">()</code><i class="L"><code><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code></i></h2>
-				<table class="h">
-					<tr class="i">
+			<section class="p" id="timeout()">
+				<h2 class="V"><i class="FINAL"><i class="PUBLIC"></i></i><code class="a">timeout</code><code class="o">()</code><i class="AB"><code><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code></i></h2>
+				<table class="r">
+					<tr class="j">
 						<td><code><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code></td>
 						<td><span><p>A duration.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Returns the command timeout.</p></span></section>
-			<section class="r" id="command()">
-				<h2 class="o"><i class="ABSTRACT"><i class="PUBLIC"></i></i><code class="J">command</code><code class="d">()</code><i class="L"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></i></h2>
-				<table class="h">
-					<tr class="i">
+			<section class="p" id="command()">
+				<h2 class="V"><i class="ABSTRACT"><i class="PUBLIC"></i></i><code class="a">command</code><code class="o">()</code><i class="AB"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></i></h2>
+				<table class="r">
+					<tr class="j">
 						<td><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></td>
 						<td><span><p>A subcommand name.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Returns the bun subcommand to invoke.</p></span></section>
-			<section class="r" id="arguments()">
-				<h2 class="o"><i class="PUBLIC"></i><code class="J">arguments</code><code class="d">()</code><i class="L"><code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></h2>
-				<table class="h">
-					<tr class="i">
+			<section class="p" id="arguments()">
+				<h2 class="V"><i class="PUBLIC"></i><code class="a">arguments</code><code class="o">()</code><i class="AB"><code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></h2>
+				<table class="r">
+					<tr class="j">
 						<td><code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></td>
 						<td><span><p>A list of arguments.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Builds the command line arguments, including the subcommand.</p></span></section>
-			<section class="r" id="flag(java.util.List,java.lang.String,boolean)">
-				<h2 class="o"><i class="FINAL"><i class="PROTECTED"></i></i><code class="J">flag</code><code class="d">(<code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">arguments</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">flag</code>, <code>boolean</code><code class="parameterName">enabled</code>)</code><i class="L"><code>void</code></i></h2>
-				<table class="h">
-					<tr class="z">
+			<section class="p" id="flag(java.util.List,java.lang.String,boolean)">
+				<h2 class="V"><i class="FINAL"><i class="PROTECTED"></i></i><code class="a">flag</code><code class="o">(<code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">arguments</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">flag</code>, <code>boolean</code><code class="parameterName">enabled</code>)</code><i class="AB"><code>void</code></i></h2>
+				<table class="r">
+					<tr class="K">
 						<td><code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">arguments</code></td>
 						<td><span><p>The destination.</p></span></td>
 					</tr>
-					<tr class="z">
+					<tr class="K">
 						<td><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">flag</code></td>
 						<td><span><p>The flag.</p></span></td>
 					</tr>
-					<tr class="z">
+					<tr class="K">
 						<td><code>boolean</code><code class="parameterName">enabled</code></td>
 						<td><span><p>Whether the flag is enabled.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Appends a boolean flag.</p></span></section>
-			<section class="r" id="value(java.util.List,java.lang.String,java.lang.String)">
-				<h2 class="o"><i class="FINAL"><i class="PROTECTED"></i></i><code class="J">value</code><code class="d">(<code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">arguments</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">flag</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">value</code>)</code><i class="L"><code>void</code></i></h2>
-				<table class="h">
-					<tr class="z">
+			<section class="p" id="value(java.util.List,java.lang.String,java.lang.String)">
+				<h2 class="V"><i class="FINAL"><i class="PROTECTED"></i></i><code class="a">value</code><code class="o">(<code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">arguments</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">flag</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">value</code>)</code><i class="AB"><code>void</code></i></h2>
+				<table class="r">
+					<tr class="K">
 						<td><code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">arguments</code></td>
 						<td><span><p>The destination.</p></span></td>
 					</tr>
-					<tr class="z">
+					<tr class="K">
 						<td><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">flag</code></td>
 						<td><span><p>The flag.</p></span></td>
 					</tr>
-					<tr class="z">
+					<tr class="K">
 						<td><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">value</code></td>
 						<td><span><p>The value, which is ignored when null or blank.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Appends a flag followed by its value.</p></span></section>
-			<section class="r" id="values(java.util.List,java.lang.String,java.util.List)">
-				<h2 class="o"><i class="FINAL"><i class="PROTECTED"></i></i><code class="J">values</code><code class="d">(<code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">arguments</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">flag</code>, <code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">values</code>)</code><i class="L"><code>void</code></i></h2>
-				<table class="h">
-					<tr class="z">
+			<section class="p" id="values(java.util.List,java.lang.String,java.util.List)">
+				<h2 class="V"><i class="FINAL"><i class="PROTECTED"></i></i><code class="a">values</code><code class="o">(<code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">arguments</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">flag</code>, <code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">values</code>)</code><i class="AB"><code>void</code></i></h2>
+				<table class="r">
+					<tr class="K">
 						<td><code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">arguments</code></td>
 						<td><span><p>The destination.</p></span></td>
 					</tr>
-					<tr class="z">
+					<tr class="K">
 						<td><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">flag</code></td>
 						<td><span><p>The flag.</p></span></td>
 					</tr>
-					<tr class="z">
+					<tr class="K">
 						<td><code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">values</code></td>
 						<td><span><p>The values.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Appends every item as a repeated flag.</p></span></section>
 		</article>
-		<aside class="Z">
-			<div class="CB">
-				<h5 class="w">Constructors</h5>
+		<aside class="T">
+			<div class="BB">
+				<h5 class="x">Constructors</h5>
 				<ul>
-					<li class="FB"><i class="PUBLIC"></i><code><a href="api/bun4j.Option.html#Option()">Option</a></code><code class="d">()</code></li>
+					<li class="L"><i class="PUBLIC"></i><code><a href="api/bun4j.Option.html#Option()">Option</a></code><code class="o">()</code></li>
 				</ul>
-				<h5 class="w">Fields</h5>
+				<h5 class="x">Fields</h5>
 				<ul>
-					<li class="FB"><i class="PROTECTED"></i><code><a href="api/bun4j.Option.html#directory">directory</a></code><i class="t"><code class="return"><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></li>
-					<li class="FB"><i class="PROTECTED"></i><code><a href="api/bun4j.Option.html#executable">executable</a></code><i class="t"><code class="return"><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PROTECTED"></i></i><code><a href="api/bun4j.Option.html#environment">environment</a></code><i class="t"><code class="return"><a aria-label="java.util.Map 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html">Map</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></li>
-					<li class="FB"><i class="PROTECTED"></i><code><a href="api/bun4j.Option.html#stdout">stdout</a></code><i class="t"><code class="return"><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></li>
-					<li class="FB"><i class="PROTECTED"></i><code><a href="api/bun4j.Option.html#stderr">stderr</a></code><i class="t"><code class="return"><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></li>
-					<li class="FB"><i class="PROTECTED"></i><code><a href="api/bun4j.Option.html#timeout">timeout</a></code><i class="t"><code class="return"><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PROTECTED"></i></i><code><a href="api/bun4j.Option.html#extra">extra</a></code><i class="t"><code class="return"><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></li>
+					<li class="L"><i class="PROTECTED"></i><code><a href="api/bun4j.Option.html#directory">directory</a></code><i class="JB"><code class="return"><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></li>
+					<li class="L"><i class="PROTECTED"></i><code><a href="api/bun4j.Option.html#executable">executable</a></code><i class="JB"><code class="return"><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></li>
+					<li class="L"><i class="FINAL"><i class="PROTECTED"></i></i><code><a href="api/bun4j.Option.html#environment">environment</a></code><i class="JB"><code class="return"><a aria-label="java.util.Map 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html">Map</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></li>
+					<li class="L"><i class="PROTECTED"></i><code><a href="api/bun4j.Option.html#stdout">stdout</a></code><i class="JB"><code class="return"><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></li>
+					<li class="L"><i class="PROTECTED"></i><code><a href="api/bun4j.Option.html#stderr">stderr</a></code><i class="JB"><code class="return"><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></li>
+					<li class="L"><i class="PROTECTED"></i><code><a href="api/bun4j.Option.html#timeout">timeout</a></code><i class="JB"><code class="return"><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code></i></li>
+					<li class="L"><i class="FINAL"><i class="PROTECTED"></i></i><code><a href="api/bun4j.Option.html#extra">extra</a></code><i class="JB"><code class="return"><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></li>
 				</ul>
-				<h5 class="w">Methods</h5>
+				<h5 class="x">Methods</h5>
 				<ul>
-					<li class="FB"><i class="FINAL"><i class="PROTECTED"></i></i><code><a href="api/bun4j.Option.html#self()">self</a></code><code class="d">()</code><i class="t"><code>Self</code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#directory(java.lang.String)">directory</a></code><code class="d">(<code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">path</code>)</code><i class="t"><code>Self</code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#directory(java.nio.file.Path)">directory</a></code><code class="d">(<code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">path</code>)</code><i class="t"><code>Self</code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#executable(java.lang.String)">executable</a></code><code class="d">(<code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">path</code>)</code><i class="t"><code>Self</code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#executable(java.nio.file.Path)">executable</a></code><code class="d">(<code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">path</code>)</code><i class="t"><code>Self</code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#env(java.lang.String,java.lang.String)">env</a></code><code class="d">(<code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">key</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">value</code>)</code><i class="t"><code>Self</code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#stdout(java.util.function.Consumer)">stdout</a></code><code class="d">(<code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">listener</code>)</code><i class="t"><code>Self</code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#stderr(java.util.function.Consumer)">stderr</a></code><code class="d">(<code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">listener</code>)</code><i class="t"><code>Self</code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#echo()">echo</a></code><code class="d">()</code><i class="t"><code>Self</code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#timeout(java.time.Duration)">timeout</a></code><code class="d">(<code><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code><code class="parameterName">timeout</code>)</code><i class="t"><code>Self</code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#raw(java.lang.String...)">raw</a></code><code class="d">(<code array="var"><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">arguments</code>)</code><i class="t"><code>Self</code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#directory()">directory</a></code><code class="d">()</code><i class="t"><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#executable()">executable</a></code><code class="d">()</code><i class="t"><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#environment()">environment</a></code><code class="d">()</code><i class="t"><code><a aria-label="java.util.Map 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html">Map</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#stdout()">stdout</a></code><code class="d">()</code><i class="t"><code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#stderr()">stderr</a></code><code class="d">()</code><i class="t"><code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#timeout()">timeout</a></code><code class="d">()</code><i class="t"><code><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code></i></li>
-					<li class="FB"><i class="ABSTRACT"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#command()">command</a></code><code class="d">()</code><i class="t"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></i></li>
-					<li class="FB"><i class="PUBLIC"></i><code><a href="api/bun4j.Option.html#arguments()">arguments</a></code><code class="d">()</code><i class="t"><code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PROTECTED"></i></i><code><a href="api/bun4j.Option.html#flag(java.util.List,java.lang.String,boolean)">flag</a></code><code class="d">(<code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">arguments</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">flag</code>, <code>boolean</code><code class="parameterName">enabled</code>)</code><i class="t"><code>void</code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PROTECTED"></i></i><code><a href="api/bun4j.Option.html#value(java.util.List,java.lang.String,java.lang.String)">value</a></code><code class="d">(<code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">arguments</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">flag</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">value</code>)</code><i class="t"><code>void</code></i></li>
-					<li class="FB"><i class="FINAL"><i class="PROTECTED"></i></i><code><a href="api/bun4j.Option.html#values(java.util.List,java.lang.String,java.util.List)">values</a></code><code class="d">(<code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">arguments</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">flag</code>, <code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">values</code>)</code><i class="t"><code>void</code></i></li>
+					<li class="L"><i class="FINAL"><i class="PROTECTED"></i></i><code><a href="api/bun4j.Option.html#self()">self</a></code><code class="o">()</code><i class="JB"><code>Self</code></i></li>
+					<li class="L"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#directory(java.lang.String)">directory</a></code><code class="o">(<code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">path</code>)</code><i class="JB"><code>Self</code></i></li>
+					<li class="L"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#directory(java.nio.file.Path)">directory</a></code><code class="o">(<code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">path</code>)</code><i class="JB"><code>Self</code></i></li>
+					<li class="L"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#executable(java.lang.String)">executable</a></code><code class="o">(<code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">path</code>)</code><i class="JB"><code>Self</code></i></li>
+					<li class="L"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#executable(java.nio.file.Path)">executable</a></code><code class="o">(<code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">path</code>)</code><i class="JB"><code>Self</code></i></li>
+					<li class="L"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#env(java.lang.String,java.lang.String)">env</a></code><code class="o">(<code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">key</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">value</code>)</code><i class="JB"><code>Self</code></i></li>
+					<li class="L"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#stdout(java.util.function.Consumer)">stdout</a></code><code class="o">(<code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">listener</code>)</code><i class="JB"><code>Self</code></i></li>
+					<li class="L"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#stderr(java.util.function.Consumer)">stderr</a></code><code class="o">(<code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">listener</code>)</code><i class="JB"><code>Self</code></i></li>
+					<li class="L"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#echo()">echo</a></code><code class="o">()</code><i class="JB"><code>Self</code></i></li>
+					<li class="L"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#timeout(java.time.Duration)">timeout</a></code><code class="o">(<code><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code><code class="parameterName">timeout</code>)</code><i class="JB"><code>Self</code></i></li>
+					<li class="L"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#raw(java.lang.String...)">raw</a></code><code class="o">(<code array="var"><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">arguments</code>)</code><i class="JB"><code>Self</code></i></li>
+					<li class="L"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#directory()">directory</a></code><code class="o">()</code><i class="JB"><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></li>
+					<li class="L"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#executable()">executable</a></code><code class="o">()</code><i class="JB"><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></li>
+					<li class="L"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#environment()">environment</a></code><code class="o">()</code><i class="JB"><code><a aria-label="java.util.Map 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html">Map</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></li>
+					<li class="L"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#stdout()">stdout</a></code><code class="o">()</code><i class="JB"><code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></li>
+					<li class="L"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#stderr()">stderr</a></code><code class="o">()</code><i class="JB"><code><a aria-label="java.util.function.Consumer 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Consumer.html">Consumer</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></li>
+					<li class="L"><i class="FINAL"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#timeout()">timeout</a></code><code class="o">()</code><i class="JB"><code><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code></i></li>
+					<li class="L"><i class="ABSTRACT"><i class="PUBLIC"></i></i><code><a href="api/bun4j.Option.html#command()">command</a></code><code class="o">()</code><i class="JB"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></i></li>
+					<li class="L"><i class="PUBLIC"></i><code><a href="api/bun4j.Option.html#arguments()">arguments</a></code><code class="o">()</code><i class="JB"><code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code></i></li>
+					<li class="L"><i class="FINAL"><i class="PROTECTED"></i></i><code><a href="api/bun4j.Option.html#flag(java.util.List,java.lang.String,boolean)">flag</a></code><code class="o">(<code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">arguments</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">flag</code>, <code>boolean</code><code class="parameterName">enabled</code>)</code><i class="JB"><code>void</code></i></li>
+					<li class="L"><i class="FINAL"><i class="PROTECTED"></i></i><code><a href="api/bun4j.Option.html#value(java.util.List,java.lang.String,java.lang.String)">value</a></code><code class="o">(<code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">arguments</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">flag</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">value</code>)</code><i class="JB"><code>void</code></i></li>
+					<li class="L"><i class="FINAL"><i class="PROTECTED"></i></i><code><a href="api/bun4j.Option.html#values(java.util.List,java.lang.String,java.util.List)">values</a></code><code class="o">(<code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">arguments</code>, <code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code><code class="parameterName">flag</code>, <code><a aria-label="java.util.List 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html">List</a><code class="parameters"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></code></code><code class="parameterName">values</code>)</code><i class="JB"><code>void</code></i></li>
 				</ul>
 			</div>
 		</aside>
-		<footer class="X">
+		<footer class="R">
 			<p>Powered by <a href="https://github.com/teletha/evergarden" target="_">Evergarden</a></p>
 		</footer>
 	</body>

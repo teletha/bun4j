@@ -19,10 +19,10 @@
 		<link href="https://cdn.jsdelivr.net/npm/ress@4.0.0/dist/ress.min.css" rel="stylesheet"/>
 		<link href="main.css" rel="stylesheet"/>
 	</head>
-	<body class="U">
-		<header class="V" date="2026-11-26">
-			<h1 class="a"><a href="index.html"><code>Bun4j</code></a></h1>
-			<nav class="b"><a href="api/main.html" id="API"><svg class="package">
+	<body class="O">
+		<header class="P" date="2026-11-26">
+			<h1 class="k"><a href="index.html"><code>Bun4j</code></a></h1>
+			<nav class="i"><a href="api/main.html" id="API"><svg class="package">
 						<use href="main.svg#package"/>
 					</svg>
 				</a><a href="doc/changelog.html" id="Activity"><svg class="activity">
@@ -35,108 +35,108 @@
 						<use href="main.svg#github"/>
 					</svg>
 				</a></nav>
-			<div class="c"><a aria-label="Change color scheme" id="theme"><svg class="sun">
+			<div class="f"><a aria-label="Change color scheme" id="theme"><svg class="sun">
 						<use href="main.svg#sun"/>
 					</svg><svg class="moon">
 						<use href="main.svg#moon"/>
 					</svg>
 				</a></div>
 		</header>
-		<nav class="Y"></nav>
-		<article class="W" id="Article">
-			<section class="r"><code class="AB">bun4j.internal</code>
-				<h2 class="Class v"><code class="J">BunInstaller</code></h2>
-				<div class="f"></div><span class="A"><p>Downloads, installs and updates the bun runtime.</p></span></section>
-			<section class="r" id="defaultDirectory()">
-				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">defaultDirectory</code><code class="d">()</code><i class="L"><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></h2>
-				<table class="h">
-					<tr class="i">
+		<nav class="S"></nav>
+		<article class="Q" id="Article">
+			<section class="p"><code class="U">bun4j.internal</code>
+				<h2 class="Class w"><code class="a">BunInstaller</code></h2>
+				<div class="m"></div><span class="A"><p>Downloads, installs and updates the bun runtime.</p></span></section>
+			<section class="p" id="defaultDirectory()">
+				<h2 class="V"><i class="STATIC PUBLIC"></i><code class="a">defaultDirectory</code><code class="o">()</code><i class="AB"><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></h2>
+				<table class="r">
+					<tr class="j">
 						<td><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></td>
 						<td><span><code>~/.bun/bin</code>.</span></td>
 					</tr>
 				</table><span class="A"><p>Returns the default installation directory.</p></span></section>
-			<section class="r" id="executableName()">
-				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">executableName</code><code class="d">()</code><i class="L"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></i></h2>
-				<table class="h">
-					<tr class="i">
+			<section class="p" id="executableName()">
+				<h2 class="V"><i class="STATIC PUBLIC"></i><code class="a">executableName</code><code class="o">()</code><i class="AB"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></i></h2>
+				<table class="r">
+					<tr class="j">
 						<td><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></td>
 						<td><span><code>bun.exe</code> on Windows, otherwise <code>bun</code>.</span></td>
 					</tr>
 				</table><span class="A"><p>Returns the name of the bun executable on the current platform.</p></span></section>
-			<section class="r" id="resolve()">
-				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">resolve</code><code class="d">()</code><i class="L"><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></i></h2>
-				<table class="h">
-					<tr class="i">
+			<section class="p" id="resolve()">
+				<h2 class="V"><i class="STATIC PUBLIC"></i><code class="a">resolve</code><code class="o">()</code><i class="AB"><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></i></h2>
+				<table class="r">
+					<tr class="j">
 						<td><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></td>
 						<td><span><p>The installation, or null if bun is not available.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Finds an installed bun. A managed installation in <code>~/.bun/bin</code> takes precedence over
 the PATH.</p></span></section>
-			<section class="r" id="resolve(java.nio.file.Path)">
-				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">resolve</code><code class="d">(<code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">directory</code>)</code><i class="L"><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></i></h2>
-				<table class="h">
-					<tr class="z">
+			<section class="p" id="resolve(java.nio.file.Path)">
+				<h2 class="V"><i class="STATIC PUBLIC"></i><code class="a">resolve</code><code class="o">(<code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">directory</code>)</code><i class="AB"><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></i></h2>
+				<table class="r">
+					<tr class="K">
 						<td><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">directory</code></td>
 						<td><span><p>A directory.</p></span></td>
 					</tr>
-					<tr class="i">
+					<tr class="j">
 						<td><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></td>
 						<td><span><p>The installation, or null if no executable exists.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Finds a bun inside the specified directory.</p></span></section>
-			<section class="r" id="install(bun4j.internal.InstallOption)">
-				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">install</code><code class="d">(<code><a aria-label="bun4j.internal.InstallOption" href="api/bun4j.internal.InstallOption.html">InstallOption</a></code><code class="parameterName">option</code>)</code><i class="L"><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></i></h2>
-				<table class="h">
-					<tr class="z">
+			<section class="p" id="install(bun4j.internal.InstallOption)">
+				<h2 class="V"><i class="STATIC PUBLIC"></i><code class="a">install</code><code class="o">(<code><a aria-label="bun4j.internal.InstallOption" href="api/bun4j.internal.InstallOption.html">InstallOption</a></code><code class="parameterName">option</code>)</code><i class="AB"><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></i></h2>
+				<table class="r">
+					<tr class="K">
 						<td><code><a aria-label="bun4j.internal.InstallOption" href="api/bun4j.internal.InstallOption.html">InstallOption</a></code><code class="parameterName">option</code></td>
 						<td><span><p>The installation options.</p></span></td>
 					</tr>
-					<tr class="i">
+					<tr class="j">
 						<td><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></td>
 						<td><span><p>The installed runtime.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Installs bun into the local directory.</p></span></section>
-			<section class="r" id="update(bun4j.internal.UpdateOption)">
-				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">update</code><code class="d">(<code><a aria-label="bun4j.internal.UpdateOption" href="api/bun4j.internal.UpdateOption.html">UpdateOption</a></code><code class="parameterName">option</code>)</code><i class="L"><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></i></h2>
-				<table class="h">
-					<tr class="z">
+			<section class="p" id="update(bun4j.internal.UpdateOption)">
+				<h2 class="V"><i class="STATIC PUBLIC"></i><code class="a">update</code><code class="o">(<code><a aria-label="bun4j.internal.UpdateOption" href="api/bun4j.internal.UpdateOption.html">UpdateOption</a></code><code class="parameterName">option</code>)</code><i class="AB"><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></i></h2>
+				<table class="r">
+					<tr class="K">
 						<td><code><a aria-label="bun4j.internal.UpdateOption" href="api/bun4j.internal.UpdateOption.html">UpdateOption</a></code><code class="parameterName">option</code></td>
 						<td><span><p>The update options.</p></span></td>
 					</tr>
-					<tr class="i">
+					<tr class="j">
 						<td><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></td>
 						<td><span><p>The updated runtime.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Updates the local bun. The official <code>bun upgrade</code> command is tried first, then a fresh
 download of the requested release.</p></span></section>
-			<section class="r" id="version(java.nio.file.Path)">
-				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">version</code><code class="d">(<code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">executable</code>)</code><i class="L"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></i></h2>
-				<table class="h">
-					<tr class="z">
+			<section class="p" id="version(java.nio.file.Path)">
+				<h2 class="V"><i class="STATIC PUBLIC"></i><code class="a">version</code><code class="o">(<code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">executable</code>)</code><i class="AB"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></i></h2>
+				<table class="r">
+					<tr class="K">
 						<td><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">executable</code></td>
 						<td><span><p>A bun executable.</p></span></td>
 					</tr>
-					<tr class="i">
+					<tr class="j">
 						<td><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></td>
 						<td><span><p>A version string, or an empty string if it cannot be detected.</p></span></td>
 					</tr>
 				</table><span class="A"><p>Returns the version of an executable by running <code>bun --version</code>.</p></span></section>
 		</article>
-		<aside class="Z">
-			<div class="CB">
-				<h5 class="w">Static Methods</h5>
+		<aside class="T">
+			<div class="BB">
+				<h5 class="x">Static Methods</h5>
 				<ul>
-					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.internal.BunInstaller.html#defaultDirectory()">defaultDirectory</a></code><code class="d">()</code><i class="t"><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></li>
-					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.internal.BunInstaller.html#executableName()">executableName</a></code><code class="d">()</code><i class="t"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></i></li>
-					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.internal.BunInstaller.html#resolve()">resolve</a></code><code class="d">()</code><i class="t"><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></i></li>
-					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.internal.BunInstaller.html#resolve(java.nio.file.Path)">resolve</a></code><code class="d">(<code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">directory</code>)</code><i class="t"><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></i></li>
-					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.internal.BunInstaller.html#install(bun4j.internal.InstallOption)">install</a></code><code class="d">(<code><a aria-label="bun4j.internal.InstallOption" href="api/bun4j.internal.InstallOption.html">InstallOption</a></code><code class="parameterName">option</code>)</code><i class="t"><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></i></li>
-					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.internal.BunInstaller.html#update(bun4j.internal.UpdateOption)">update</a></code><code class="d">(<code><a aria-label="bun4j.internal.UpdateOption" href="api/bun4j.internal.UpdateOption.html">UpdateOption</a></code><code class="parameterName">option</code>)</code><i class="t"><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></i></li>
-					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.internal.BunInstaller.html#version(java.nio.file.Path)">version</a></code><code class="d">(<code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">executable</code>)</code><i class="t"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></i></li>
+					<li class="L"><i class="STATIC PUBLIC"></i><code><a href="api/bun4j.internal.BunInstaller.html#defaultDirectory()">defaultDirectory</a></code><code class="o">()</code><i class="JB"><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></li>
+					<li class="L"><i class="STATIC PUBLIC"></i><code><a href="api/bun4j.internal.BunInstaller.html#executableName()">executableName</a></code><code class="o">()</code><i class="JB"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></i></li>
+					<li class="L"><i class="STATIC PUBLIC"></i><code><a href="api/bun4j.internal.BunInstaller.html#resolve()">resolve</a></code><code class="o">()</code><i class="JB"><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></i></li>
+					<li class="L"><i class="STATIC PUBLIC"></i><code><a href="api/bun4j.internal.BunInstaller.html#resolve(java.nio.file.Path)">resolve</a></code><code class="o">(<code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">directory</code>)</code><i class="JB"><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></i></li>
+					<li class="L"><i class="STATIC PUBLIC"></i><code><a href="api/bun4j.internal.BunInstaller.html#install(bun4j.internal.InstallOption)">install</a></code><code class="o">(<code><a aria-label="bun4j.internal.InstallOption" href="api/bun4j.internal.InstallOption.html">InstallOption</a></code><code class="parameterName">option</code>)</code><i class="JB"><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></i></li>
+					<li class="L"><i class="STATIC PUBLIC"></i><code><a href="api/bun4j.internal.BunInstaller.html#update(bun4j.internal.UpdateOption)">update</a></code><code class="o">(<code><a aria-label="bun4j.internal.UpdateOption" href="api/bun4j.internal.UpdateOption.html">UpdateOption</a></code><code class="parameterName">option</code>)</code><i class="JB"><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></i></li>
+					<li class="L"><i class="STATIC PUBLIC"></i><code><a href="api/bun4j.internal.BunInstaller.html#version(java.nio.file.Path)">version</a></code><code class="o">(<code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code><code class="parameterName">executable</code>)</code><i class="JB"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></i></li>
 				</ul>
 			</div>
 		</aside>
-		<footer class="X">
+		<footer class="R">
 			<p>Powered by <a href="https://github.com/teletha/evergarden" target="_">Evergarden</a></p>
 		</footer>
 	</body>
