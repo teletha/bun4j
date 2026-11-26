@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta content="width=device-width, initial-scale=1" name="viewport"/>
+		<meta content="Explains how to use Bun4j and its API. " name="description"/>
+		<link href="https://cdn.jsdelivr.net" rel="preconnect"/>
+		<link href="https://fonts.googleapis.com" rel="preconnect"/>
+		<link crossorigin="null" href="https://fonts.gstatic.com" rel="preconnect"/>
+		<link as="style" fetchpriority="high" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter" rel="preload"/>
+		<link href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter" media="print" onload="this.media=&apos;all&apos;" rel="stylesheet"/>
+		<link as="style" fetchpriority="high" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Material+Icons" rel="preload"/>
+		<link href="https://fonts.googleapis.com/css2?display=swap&amp;family=Material+Icons" media="print" onload="this.media=&apos;all&apos;" rel="stylesheet"/>
+		<link as="style" fetchpriority="high" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Vollkorn" rel="preload"/>
+		<link href="https://fonts.googleapis.com/css2?display=swap&amp;family=Vollkorn" media="print" onload="this.media=&apos;all&apos;" rel="stylesheet"/>
+		<title>Bun4j API</title>
+		<base href="../"/>
+		<script src="mimic.js" type="module"></script>
+		<link href="https://cdn.jsdelivr.net/npm/ress@4.0.0/dist/ress.min.css" rel="stylesheet"/>
+		<link href="main.css" rel="stylesheet"/>
+	</head>
+	<body class="U">
+		<header class="V" date="2026-11-26">
+			<h1 class="a"><a href="index.html"><code>Bun4j</code></a></h1>
+			<nav class="b"><a href="api/main.html" id="API"><svg class="package">
+						<use href="main.svg#package"/>
+					</svg>
+				</a><a href="doc/changelog.html" id="Activity"><svg class="activity">
+						<use href="main.svg#activity"/>
+					</svg>
+				</a><a href="https://github.com/teletha/bun4j/discussions" id="Community" target="_blank"><svg class="user">
+						<use href="main.svg#user"/>
+					</svg>
+				</a><a href="https://github.com/teletha/bun4j" id="Repository" target="_blank"><svg class="github">
+						<use href="main.svg#github"/>
+					</svg>
+				</a></nav>
+			<div class="c"><a aria-label="Change color scheme" id="theme"><svg class="sun">
+						<use href="main.svg#sun"/>
+					</svg><svg class="moon">
+						<use href="main.svg#moon"/>
+					</svg>
+				</a></div>
+		</header>
+		<nav class="Y"></nav>
+		<article class="W" id="Article">
+			<section class="r"><code class="AB">bun4j</code>
+				<h2 class="Class v"><code class="J">Bun</code></h2>
+				<div class="f"></div><span class="A"><p>The entry point of bun4j.</p><pre>
+Bun.build(o -&gt; o.entry(&quot;src/index.ts&quot;).outdir(&quot;dist&quot;).minify(true));
+Bun.bundle(o -&gt; o.entry(&quot;src/index.tsx&quot;).framework(Framework.REACT).dts(true));
+</pre></span></section>
+			<section class="r" id="autoManage(boolean)">
+				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">autoManage</code><code class="d">(<code>boolean</code><code class="parameterName">enabled</code>)</code><i class="L"><code>void</code></i></h2>
+				<table class="h">
+					<tr class="z">
+						<td><code>boolean</code><code class="parameterName">enabled</code></td>
+						<td><span><p>Whether to manage bun automatically.</p></span></td>
+					</tr>
+				</table><span class="A"><p>Enables or disables the automatic install and update which runs before the first bun command
+in this JVM. The initial value can also be set with the <code>bun4j.autoManage</code> system
+property.</p></span></section>
+			<section class="r" id="updateInterval()">
+				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">updateInterval</code><code class="d">()</code><i class="L"><code><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code></i></h2>
+				<table class="h">
+					<tr class="i">
+						<td><code><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code></td>
+						<td><span><p>A duration.</p></span></td>
+					</tr>
+				</table><span class="A"><p>Returns the minimum interval between two automatic update checks.</p></span></section>
+			<section class="r" id="updateInterval(java.time.Duration)">
+				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">updateInterval</code><code class="d">(<code><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code><code class="parameterName">interval</code>)</code><i class="L"><code>void</code></i></h2>
+				<table class="h">
+					<tr class="z">
+						<td><code><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code><code class="parameterName">interval</code></td>
+						<td><span><p>A duration.</p></span></td>
+					</tr>
+				</table><span class="A"><p>Changes the minimum interval between two automatic update checks. The initial value can be
+set with the <code>bun4j.updateInterval</code> system property (for example <code>P7D</code>).</p></span></section>
+			<section class="r" id="lastUpdateCheck()">
+				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">lastUpdateCheck</code><code class="d">()</code><i class="L"><code><a aria-label="java.time.Instant 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Instant.html">Instant</a></code></i></h2>
+				<table class="h">
+					<tr class="i">
+						<td><code><a aria-label="java.time.Instant 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Instant.html">Instant</a></code></td>
+						<td><span><p>An instant, or null if no check has been recorded.</p></span></td>
+					</tr>
+				</table><span class="A"><p>Returns when bun was checked for updates the last time.</p></span></section>
+			<section class="r" id="installed()">
+				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">installed</code><code class="d">()</code><i class="L"><code>boolean</code></i></h2>
+				<table class="h">
+					<tr class="i">
+						<td><code>boolean</code></td>
+						<td><span><p>true if bun is installed locally or available on the PATH.</p></span></td>
+					</tr>
+				</table><span class="A"><p>Returns whether a bun runtime is available.</p></span></section>
+			<section class="r" id="installation()">
+				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">installation</code><code class="d">()</code><i class="L"><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></i></h2>
+				<table class="h">
+					<tr class="i">
+						<td><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></td>
+						<td><span><p>The installation, or null if bun is not available.</p></span></td>
+					</tr>
+				</table><span class="A"><p>Returns the bun runtime which bun4j uses.</p></span></section>
+			<section class="r" id="executable()">
+				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">executable</code><code class="d">()</code><i class="L"><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></h2>
+				<table class="h">
+					<tr class="i">
+						<td><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></td>
+						<td><span><p>An executable path.</p></span></td>
+					</tr>
+				</table><span class="A"><p>Returns the path to the bun executable.</p></span></section>
+			<section class="r" id="version()">
+				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">version</code><code class="d">()</code><i class="L"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></i></h2>
+				<table class="h">
+					<tr class="i">
+						<td><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></td>
+						<td><span><p>A version string.</p></span></td>
+					</tr>
+				</table><span class="A"><p>Returns the version of the available bun, or an empty string if bun is not installed.</p></span></section>
+			<section class="r" id="build()">
+				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">build</code><code class="d">()</code><i class="L"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></h2>
+				<table class="h">
+					<tr class="i">
+						<td><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></td>
+						<td><span><p>The command result.</p></span></td>
+					</tr>
+				</table><span class="A"><p>Runs <code>bun build</code> with the default options.</p></span></section>
+			<section class="r" id="build(java.util.function.Function)">
+				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">build</code><code class="d">(<code><a aria-label="java.util.function.Function 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Function.html">Function</a><code class="parameters"><code><a aria-label="bun4j.BuildOption" href="api/bun4j.BuildOption.html">BuildOption</a></code>, <code><a aria-label="bun4j.BuildOption" href="api/bun4j.BuildOption.html">BuildOption</a></code></code></code><code class="parameterName">configurator</code>)</code><i class="L"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></h2>
+				<table class="h">
+					<tr class="z">
+						<td><code><a aria-label="java.util.function.Function 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Function.html">Function</a><code class="parameters"><code><a aria-label="bun4j.BuildOption" href="api/bun4j.BuildOption.html">BuildOption</a></code>, <code><a aria-label="bun4j.BuildOption" href="api/bun4j.BuildOption.html">BuildOption</a></code></code></code><code class="parameterName">configurator</code></td>
+						<td></td>
+					</tr>
+					<tr class="i">
+						<td><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section class="r" id="build(bun4j.BuildOption)">
+				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">build</code><code class="d">(<code><a aria-label="bun4j.BuildOption" href="api/bun4j.BuildOption.html">BuildOption</a></code><code class="parameterName">option</code>)</code><i class="L"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></h2>
+				<table class="h">
+					<tr class="z">
+						<td><code><a aria-label="bun4j.BuildOption" href="api/bun4j.BuildOption.html">BuildOption</a></code><code class="parameterName">option</code></td>
+						<td></td>
+					</tr>
+					<tr class="i">
+						<td><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section class="r" id="lint()">
+				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">lint</code><code class="d">()</code><i class="L"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></h2>
+				<table class="h">
+					<tr class="i">
+						<td><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></td>
+						<td><span><p>The command result.</p></span></td>
+					</tr>
+				</table><span class="A"><p>Runs <code>bun lint</code> with the default options.</p></span></section>
+			<section class="r" id="lint(java.util.function.Function)">
+				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">lint</code><code class="d">(<code><a aria-label="java.util.function.Function 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Function.html">Function</a><code class="parameters"><code><a aria-label="bun4j.LintOption" href="api/bun4j.LintOption.html">LintOption</a></code>, <code><a aria-label="bun4j.LintOption" href="api/bun4j.LintOption.html">LintOption</a></code></code></code><code class="parameterName">configurator</code>)</code><i class="L"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></h2>
+				<table class="h">
+					<tr class="z">
+						<td><code><a aria-label="java.util.function.Function 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Function.html">Function</a><code class="parameters"><code><a aria-label="bun4j.LintOption" href="api/bun4j.LintOption.html">LintOption</a></code>, <code><a aria-label="bun4j.LintOption" href="api/bun4j.LintOption.html">LintOption</a></code></code></code><code class="parameterName">configurator</code></td>
+						<td></td>
+					</tr>
+					<tr class="i">
+						<td><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section class="r" id="lint(bun4j.LintOption)">
+				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">lint</code><code class="d">(<code><a aria-label="bun4j.LintOption" href="api/bun4j.LintOption.html">LintOption</a></code><code class="parameterName">option</code>)</code><i class="L"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></h2>
+				<table class="h">
+					<tr class="z">
+						<td><code><a aria-label="bun4j.LintOption" href="api/bun4j.LintOption.html">LintOption</a></code><code class="parameterName">option</code></td>
+						<td></td>
+					</tr>
+					<tr class="i">
+						<td><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section class="r" id="format()">
+				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">format</code><code class="d">()</code><i class="L"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></h2>
+				<table class="h">
+					<tr class="i">
+						<td><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></td>
+						<td><span><p>The command result.</p></span></td>
+					</tr>
+				</table><span class="A"><p>Runs <code>bun fmt</code> with the default options.</p></span></section>
+			<section class="r" id="format(java.util.function.Function)">
+				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">format</code><code class="d">(<code><a aria-label="java.util.function.Function 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Function.html">Function</a><code class="parameters"><code><a aria-label="bun4j.FormatOption" href="api/bun4j.FormatOption.html">FormatOption</a></code>, <code><a aria-label="bun4j.FormatOption" href="api/bun4j.FormatOption.html">FormatOption</a></code></code></code><code class="parameterName">configurator</code>)</code><i class="L"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></h2>
+				<table class="h">
+					<tr class="z">
+						<td><code><a aria-label="java.util.function.Function 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Function.html">Function</a><code class="parameters"><code><a aria-label="bun4j.FormatOption" href="api/bun4j.FormatOption.html">FormatOption</a></code>, <code><a aria-label="bun4j.FormatOption" href="api/bun4j.FormatOption.html">FormatOption</a></code></code></code><code class="parameterName">configurator</code></td>
+						<td></td>
+					</tr>
+					<tr class="i">
+						<td><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section class="r" id="format(bun4j.FormatOption)">
+				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">format</code><code class="d">(<code><a aria-label="bun4j.FormatOption" href="api/bun4j.FormatOption.html">FormatOption</a></code><code class="parameterName">option</code>)</code><i class="L"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></h2>
+				<table class="h">
+					<tr class="z">
+						<td><code><a aria-label="bun4j.FormatOption" href="api/bun4j.FormatOption.html">FormatOption</a></code><code class="parameterName">option</code></td>
+						<td></td>
+					</tr>
+					<tr class="i">
+						<td><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section class="r" id="bundle(bun4j.BundleOption)">
+				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">bundle</code><code class="d">(<code><a aria-label="bun4j.BundleOption" href="api/bun4j.BundleOption.html">BundleOption</a></code><code class="parameterName">option</code>)</code><i class="L"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></h2>
+				<table class="h">
+					<tr class="z">
+						<td><code><a aria-label="bun4j.BundleOption" href="api/bun4j.BundleOption.html">BundleOption</a></code><code class="parameterName">option</code></td>
+						<td><span><p>The bundle options.</p></span></td>
+					</tr>
+					<tr class="i">
+						<td><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></td>
+						<td><span><p>The command result.</p></span></td>
+					</tr>
+				</table><span class="A"><p>Bundles a library through the JavaScript <code>Bun.build()</code> API.</p></span></section>
+			<section class="r" id="bundle(java.util.function.Function)">
+				<h2 class="o"><i class="PUBLIC STATIC"></i><code class="J">bundle</code><code class="d">(<code><a aria-label="java.util.function.Function 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Function.html">Function</a><code class="parameters"><code><a aria-label="bun4j.BundleOption" href="api/bun4j.BundleOption.html">BundleOption</a></code>, <code><a aria-label="bun4j.BundleOption" href="api/bun4j.BundleOption.html">BundleOption</a></code></code></code><code class="parameterName">configurator</code>)</code><i class="L"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></h2>
+				<table class="h">
+					<tr class="z">
+						<td><code><a aria-label="java.util.function.Function 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Function.html">Function</a><code class="parameters"><code><a aria-label="bun4j.BundleOption" href="api/bun4j.BundleOption.html">BundleOption</a></code>, <code><a aria-label="bun4j.BundleOption" href="api/bun4j.BundleOption.html">BundleOption</a></code></code></code><code class="parameterName">configurator</code></td>
+						<td></td>
+					</tr>
+					<tr class="i">
+						<td><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+		</article>
+		<aside class="Z">
+			<div class="CB">
+				<h5 class="w">Static Methods</h5>
+				<ul>
+					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.Bun.html#autoManage(boolean)">autoManage</a></code><code class="d">(<code>boolean</code><code class="parameterName">enabled</code>)</code><i class="t"><code>void</code></i></li>
+					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.Bun.html#updateInterval()">updateInterval</a></code><code class="d">()</code><i class="t"><code><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code></i></li>
+					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.Bun.html#updateInterval(java.time.Duration)">updateInterval</a></code><code class="d">(<code><a aria-label="java.time.Duration 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Duration.html">Duration</a></code><code class="parameterName">interval</code>)</code><i class="t"><code>void</code></i></li>
+					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.Bun.html#lastUpdateCheck()">lastUpdateCheck</a></code><code class="d">()</code><i class="t"><code><a aria-label="java.time.Instant 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/Instant.html">Instant</a></code></i></li>
+					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.Bun.html#installed()">installed</a></code><code class="d">()</code><i class="t"><code>boolean</code></i></li>
+					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.Bun.html#installation()">installation</a></code><code class="d">()</code><i class="t"><code><a aria-label="bun4j.Installation" href="api/bun4j.Installation.html">Installation</a></code></i></li>
+					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.Bun.html#executable()">executable</a></code><code class="d">()</code><i class="t"><code><a aria-label="java.nio.file.Path 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html">Path</a></code></i></li>
+					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.Bun.html#version()">version</a></code><code class="d">()</code><i class="t"><code><a aria-label="java.lang.String 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html">String</a></code></i></li>
+					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.Bun.html#build()">build</a></code><code class="d">()</code><i class="t"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></li>
+					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.Bun.html#build(java.util.function.Function)">build</a></code><code class="d">(<code><a aria-label="java.util.function.Function 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Function.html">Function</a><code class="parameters"><code><a aria-label="bun4j.BuildOption" href="api/bun4j.BuildOption.html">BuildOption</a></code>, <code><a aria-label="bun4j.BuildOption" href="api/bun4j.BuildOption.html">BuildOption</a></code></code></code><code class="parameterName">configurator</code>)</code><i class="t"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></li>
+					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.Bun.html#build(bun4j.BuildOption)">build</a></code><code class="d">(<code><a aria-label="bun4j.BuildOption" href="api/bun4j.BuildOption.html">BuildOption</a></code><code class="parameterName">option</code>)</code><i class="t"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></li>
+					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.Bun.html#lint()">lint</a></code><code class="d">()</code><i class="t"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></li>
+					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.Bun.html#lint(java.util.function.Function)">lint</a></code><code class="d">(<code><a aria-label="java.util.function.Function 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Function.html">Function</a><code class="parameters"><code><a aria-label="bun4j.LintOption" href="api/bun4j.LintOption.html">LintOption</a></code>, <code><a aria-label="bun4j.LintOption" href="api/bun4j.LintOption.html">LintOption</a></code></code></code><code class="parameterName">configurator</code>)</code><i class="t"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></li>
+					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.Bun.html#lint(bun4j.LintOption)">lint</a></code><code class="d">(<code><a aria-label="bun4j.LintOption" href="api/bun4j.LintOption.html">LintOption</a></code><code class="parameterName">option</code>)</code><i class="t"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></li>
+					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.Bun.html#format()">format</a></code><code class="d">()</code><i class="t"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></li>
+					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.Bun.html#format(java.util.function.Function)">format</a></code><code class="d">(<code><a aria-label="java.util.function.Function 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Function.html">Function</a><code class="parameters"><code><a aria-label="bun4j.FormatOption" href="api/bun4j.FormatOption.html">FormatOption</a></code>, <code><a aria-label="bun4j.FormatOption" href="api/bun4j.FormatOption.html">FormatOption</a></code></code></code><code class="parameterName">configurator</code>)</code><i class="t"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></li>
+					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.Bun.html#format(bun4j.FormatOption)">format</a></code><code class="d">(<code><a aria-label="bun4j.FormatOption" href="api/bun4j.FormatOption.html">FormatOption</a></code><code class="parameterName">option</code>)</code><i class="t"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></li>
+					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.Bun.html#bundle(bun4j.BundleOption)">bundle</a></code><code class="d">(<code><a aria-label="bun4j.BundleOption" href="api/bun4j.BundleOption.html">BundleOption</a></code><code class="parameterName">option</code>)</code><i class="t"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></li>
+					<li class="FB"><i class="PUBLIC STATIC"></i><code><a href="api/bun4j.Bun.html#bundle(java.util.function.Function)">bundle</a></code><code class="d">(<code><a aria-label="java.util.function.Function 🚀" href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/function/Function.html">Function</a><code class="parameters"><code><a aria-label="bun4j.BundleOption" href="api/bun4j.BundleOption.html">BundleOption</a></code>, <code><a aria-label="bun4j.BundleOption" href="api/bun4j.BundleOption.html">BundleOption</a></code></code></code><code class="parameterName">configurator</code>)</code><i class="t"><code><a aria-label="bun4j.Result" href="api/bun4j.Result.html">Result</a></code></i></li>
+				</ul>
+			</div>
+		</aside>
+		<footer class="X">
+			<p>Powered by <a href="https://github.com/teletha/evergarden" target="_">Evergarden</a></p>
+		</footer>
+	</body>
+	<script src="root.js"></script>
+	<script src="main.js" type="module"></script>
+</html>
