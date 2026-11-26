@@ -1,19 +1,63 @@
 <p align="center">
-    <a href="https://docs.oracle.com/en/java/javase/25/"><img src="https://img.shields.io/badge/Java-Release%2025-green"/></a>
+    <a href="https://docs.oracle.com/en/java/javase/24/"><img src="https://img.shields.io/badge/Java-Release%2024-green"/></a>
     <span>&nbsp;</span>
     <a href="https://jitpack.io/#io.github.teletha/bun4j"><img src="https://img.shields.io/jitpack/version/io.github.teletha/bun4j?label=Repository&color=green"></a>
     <span>&nbsp;</span>
     <a href="https://teletha.github.io/bun4j"><img src="https://img.shields.io/website.svg?down_color=red&down_message=CLOSE&label=Official%20Site&up_color=green&up_message=OPEN&url=https%3A%2F%2Fteletha.github.io%2Fbun4j"></a>
 </p>
 
+## Summary
+Bun4j operates Bun from Java. It installs and updates bun locally, runs its build, lint and format commands, and bundles TypeScript, React, Svelte and Vue libraries into JavaScript and CSS which can be consumed from external projects.
+
+- The bun runtime is downloaded from the official GitHub releases into ~/.bun/bin. Before the first command of a JVM, bun is installed if missing and checked for updates at most once a week.
+- Every command is synchronous and returns a Result with the exit code, stdout and stderr. Output can be streamed line by line.
+- Library bundles are produced through the JavaScript Bun.build() API, which enables framework plugins, CSS extraction and type declarations. React, Svelte and Vue are detected automatically from package.json and source files.
+<p align="right"><a href="#top">back to top</a></p>
 
 
+## Usage
+Bun is installed into ~/.bun/bin automatically before the first command in a JVM, and checked for updates at most once a week. The current state can be inspected at any time.
+```java
+boolean installed = Bun.installed();
+String version = Bun.version();
+java.time.Duration interval = Bun.updateInterval();
+```
+
+Run build, lint and format. Every command returns a Result which reports the exit code and both output streams. When bun has no built-in linter, lint automatically falls back to oxlint through bunx.
+```java
+Result built = Bun.build(o -> o.entry("src/index.ts")
+        .outdir("dist")
+        .target(Target.BROWSER)
+        .format(ModuleFormat.ESM)
+        .minify(true));
+
+Bun.lint(o -> o.path("src").fix(true).maxWarnings(0));
+Bun.format(o -> o.path("src").check(true));
+
+if (!built.succeeded()) {
+    System.err.println(built.output());
+}
+```
+
+Bundle a library into JavaScript and CSS with type declarations and a package.json exposing the exports. React, Svelte and Vue are detected automatically from package.json and source files; they can also be selected explicitly with Framework.
+```java
+Bun.bundle(o -> o.entry("src/index.tsx")
+        .outdir("dist")
+        .format(ModuleFormat.ESM)
+        .dts(true)
+        .minify(true)
+        .generatePackageJson(true)
+        .packageName("my-library")
+        .echo());
+```
+
+<p align="right"><a href="#top">back to top</a></p>
 
 
 
 
 ## Prerequisites
-Bun4j runs on all major operating systems and requires only [Java version 25](https://docs.oracle.com/en/java/javase/25/) or later to run.
+Bun4j runs on all major operating systems and requires only [Java version 24](https://docs.oracle.com/en/java/javase/24/) or later to run.
 To check, please run `java -version` on your terminal.
 <p align="right"><a href="#top">back to top</a></p>
 
