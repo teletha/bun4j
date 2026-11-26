@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.github.teletha</groupId>
 	<artifactId>bun4j</artifactId>
-	<version>1.0</version>
+	<version>1.0.1</version>
 	<packaging>jar</packaging>
 	<name>bun4j</name>
 	<description>Bun4j operates Bun from Java. It installs and updates bun locally, runs its build, lint and format commands, and bundles TypeScript, React, Svelte and Vue libraries into JavaScript and CSS which can be consumed from external projects.
