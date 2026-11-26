@@ -15,17 +15,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * The options of {@code bun build}.
+ * The options of the low level {@code bun build} CLI command.
  */
-public class BuildOption extends Option<BuildOption> {
+public class BuildOption extends BuildConfig<BuildOption> {
 
-    private final List<String> entries = new ArrayList();
-    private final List<String> external = new ArrayList();
     private final List<String> drop = new ArrayList();
-    private final Map<String, String> define = new LinkedHashMap();
     private final Map<String, String> loader = new LinkedHashMap();
 
-    private String outdir;
     private String root;
     private String publicPath;
     private String entryNaming;
@@ -33,39 +29,12 @@ public class BuildOption extends Option<BuildOption> {
     private String assetNaming;
     private String banner;
     private String footer;
-    private Target target;
-    private ModuleFormat format;
-    private SourceMap sourcemap;
-    private boolean minify;
     private boolean minifyWhitespace;
     private boolean minifyIdentifiers;
     private boolean minifySyntax;
-    private boolean splitting;
     private boolean modulePreload = true;
-    private boolean check;
-    private boolean dts;
     private boolean watch;
     private boolean noBundle;
-
-    /**
-     * Adds an entrypoint.
-     *
-     * @param paths Entrypoint paths.
-     * @return Chainable API.
-     */
-    public BuildOption entry(String... paths) {
-        for (String path : paths) {
-            if (path != null && !path.isBlank()) {
-                entries.add(path);
-            }
-        }
-        return this;
-    }
-
-    public BuildOption outdir(String path) {
-        this.outdir = path;
-        return this;
-    }
 
     public BuildOption root(String path) {
         this.root = path;
@@ -102,26 +71,6 @@ public class BuildOption extends Option<BuildOption> {
         return this;
     }
 
-    public BuildOption target(Target target) {
-        this.target = target;
-        return this;
-    }
-
-    public BuildOption format(ModuleFormat format) {
-        this.format = format;
-        return this;
-    }
-
-    public BuildOption sourcemap(SourceMap sourcemap) {
-        this.sourcemap = sourcemap;
-        return this;
-    }
-
-    public BuildOption minify(boolean enabled) {
-        this.minify = enabled;
-        return this;
-    }
-
     public BuildOption minifyWhitespace(boolean enabled) {
         this.minifyWhitespace = enabled;
         return this;
@@ -137,23 +86,8 @@ public class BuildOption extends Option<BuildOption> {
         return this;
     }
 
-    public BuildOption splitting(boolean enabled) {
-        this.splitting = enabled;
-        return this;
-    }
-
     public BuildOption modulePreload(boolean enabled) {
         this.modulePreload = enabled;
-        return this;
-    }
-
-    public BuildOption check(boolean enabled) {
-        this.check = enabled;
-        return this;
-    }
-
-    public BuildOption dts(boolean enabled) {
-        this.dts = enabled;
         return this;
     }
 
@@ -164,20 +98,6 @@ public class BuildOption extends Option<BuildOption> {
 
     public BuildOption noBundle(boolean enabled) {
         this.noBundle = enabled;
-        return this;
-    }
-
-    public BuildOption external(String... modules) {
-        for (String module : modules) {
-            if (module != null && !module.isBlank()) {
-                external.add(module);
-            }
-        }
-        return this;
-    }
-
-    public BuildOption define(String identifier, String replacement) {
-        this.define.put(identifier, replacement);
         return this;
     }
 
@@ -212,16 +132,7 @@ public class BuildOption extends Option<BuildOption> {
         arguments.add("build");
         arguments.addAll(entries);
 
-        value(arguments, "--outdir", outdir);
-        if (target != null) {
-            value(arguments, "--target", target.value());
-        }
-        if (format != null) {
-            value(arguments, "--format", format.value());
-        }
-        if (sourcemap != null) {
-            value(arguments, "--sourcemap", sourcemap.value());
-        }
+        headerArguments(arguments);
 
         flag(arguments, "--minify", minify);
         flag(arguments, "--minify-whitespace", minifyWhitespace);
@@ -242,9 +153,8 @@ public class BuildOption extends Option<BuildOption> {
         value(arguments, "--banner", banner);
         value(arguments, "--footer", footer);
 
-        values(arguments, "--external", external);
-        define.forEach((key, replacement) -> value(arguments, "--define", key + "=" + replacement));
-        loader.forEach((extension, name) -> value(arguments, "--loader", extension + ":" + name));
+        definedArguments(arguments);
+        values(arguments, "--loader", loader.entrySet().stream().map(e -> e.getKey() + ":" + e.getValue()).toList());
         values(arguments, "--drop", drop);
         arguments.addAll(extra);
         return arguments;

@@ -183,6 +183,25 @@ class BunTest {
     }
 
     @Test
+    void realBunCanCheckAndTest() throws IOException {
+        Installation bun = BunInstaller.resolve();
+        org.junit.jupiter.api.Assumptions.assumeTrue(bun != null, "A real bun runtime is required.");
+        Files.createDirectories(room.root.resolve("src"));
+        Files.writeString(room.root.resolve("src/index.ts"), "export const sum = (a: number, b: number) => a + b;\n");
+        Files.writeString(room.root.resolve("src/index.test.ts"), """
+                import { expect, test } from "bun:test";
+                import { sum } from "./index";
+                test("sum", () => expect(sum(1, 2)).toBe(3));
+                """);
+
+        Result checked = Bun.check(new CheckOption().executable(bun.executable()).directory(room.root).path("src/index.ts"));
+        assertTrue(checked.succeeded(), checked.output());
+
+        Result tested = Bun.test(new TestOption().executable(bun.executable()).directory(room.root).path("src/index.test.ts"));
+        assertTrue(tested.succeeded(), tested.output());
+    }
+
+    @Test
     void updateCheckIsLimitedToWeeklyInterval() throws IOException {
         Path originalDirectory = Bun.stateDirectory;
         Duration originalInterval = Bun.updateInterval();
@@ -212,6 +231,22 @@ class BunTest {
         assertEquals("@eckidevs/bun-plugin-vue", Bun.packageName("@eckidevs/bun-plugin-vue@0.3.0"));
         assertEquals("@eckidevs/bun-plugin-vue", Bun.packageName("@eckidevs/bun-plugin-vue"));
         assertEquals("bun-plugin-svelte", Bun.packageName("bun-plugin-svelte@0.0.6"));
+    }
+
+    @Test
+    void buildCanReuseBundleOptions() {
+        Path bun = TestBun.create(room.root);
+
+        Result result = Bun.build(new BundleOption()
+                .executable(bun)
+                .entry("src/index.ts")
+                .outdir("out")
+                .minify(true)
+                .external("react"));
+
+        assertTrue(result.stdout().contains(
+                "OUT: build src/index.ts --outdir out --target browser --format esm --minify --splitting --external react"),
+                result.output());
     }
 
     @Test

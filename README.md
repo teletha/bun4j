@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://docs.oracle.com/en/java/javase/25/"><img src="https://img.shields.io/badge/Java-Release%2025-green"/></a>
+    <a href="https://docs.oracle.com/en/java/javase/24/"><img src="https://img.shields.io/badge/Java-Release%2024-green"/></a>
     <span>&nbsp;</span>
     <a href="https://jitpack.io/#io.github.teletha/bun4j"><img src="https://img.shields.io/jitpack/version/io.github.teletha/bun4j?label=Repository&color=green"></a>
     <span>&nbsp;</span>
@@ -39,6 +39,38 @@ if (!built.succeeded()) {
 }
 ```
 
+Manage npm dependencies in a project. installDependencies reads package.json, while add and remove update it.
+```java
+Bun.installDependencies(o -> o.directory("./project").frozenLockfile(true));
+Bun.installDependencies(o -> o.directory("./project")
+        .linker(Linker.ISOLATED)
+        .globalStore(true)
+        .cacheDir("./bun-cache"));
+Bun.add(o -> o.directory("./project").packageNames("react", "svelte").dev(true));
+Bun.remove(o -> o.directory("./project").packageNames("vue"));
+Bun.updateDependencies();
+```
+
+Read lint or build issues as structured diagnostics instead of raw text. Use -f json for machine readable reports.
+```java
+Result linted = Bun.lint(o -> o.path("src").format("json"));
+for (Diagnostic issue : linted.diagnostics()) {
+    System.out.println(issue.file() + ":" + issue.line() + " " + issue.message());
+}
+```
+
+Type check and test a project before bundling it.
+```java
+Bun.check(o -> o.path("src/index.ts").compilerOption("strict", null));
+Bun.test(o -> o.path("test").coverage(true).timeout(10000));
+```
+
+The same shared options can be passed to Bun.build to run the plain CLI without plugins or package metadata.
+```java
+BundleOption option = new BundleOption().entry("src/index.ts").outdir("dist");
+Bun.build(option);
+```
+
 Bundle a library into JavaScript and CSS with type declarations and a package.json exposing the exports. React, Svelte and Vue are detected automatically from package.json and source files; they can also be selected explicitly with Framework.
 ```java
 Bun.bundle(o -> o.entry("src/index.tsx")
@@ -57,7 +89,7 @@ Bun.bundle(o -> o.entry("src/index.tsx")
 
 
 ## Prerequisites
-Bun4j runs on all major operating systems and requires only [Java version 25](https://docs.oracle.com/en/java/javase/25/) or later to run.
+Bun4j runs on all major operating systems and requires only [Java version 24](https://docs.oracle.com/en/java/javase/24/) or later to run.
 To check, please run `java -version` on your terminal.
 <p align="right"><a href="#top">back to top</a></p>
 

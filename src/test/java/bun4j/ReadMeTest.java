@@ -49,6 +49,50 @@ class ReadMeTest {
     }
 
     /**
+     * Manage npm dependencies in a project. installDependencies reads package.json, while add and remove update it.
+     */
+    @Test
+    void dependencies() {
+        Bun.installDependencies(o -> o.directory("./project").frozenLockfile(true));
+        Bun.installDependencies(o -> o.directory("./project")
+                .linker(Linker.ISOLATED)
+                .globalStore(true)
+                .cacheDir("./bun-cache"));
+        Bun.add(o -> o.directory("./project").packageNames("react", "svelte").dev(true));
+        Bun.remove(o -> o.directory("./project").packageNames("vue"));
+        Bun.updateDependencies();
+    }
+
+    /**
+     * Read lint or build issues as structured diagnostics instead of raw text. Use -f json for machine readable reports.
+     */
+    @Test
+    void diagnostics() {
+        Result linted = Bun.lint(o -> o.path("src").format("json"));
+        for (Diagnostic issue : linted.diagnostics()) {
+            System.out.println(issue.file() + ":" + issue.line() + " " + issue.message());
+        }
+    }
+
+    /**
+     * Type check and test a project before bundling it.
+     */
+    @Test
+    void checkAndTest() {
+        Bun.check(o -> o.path("src/index.ts").compilerOption("strict", null));
+        Bun.test(o -> o.path("test").coverage(true).timeout(10000));
+    }
+
+    /**
+     * The same shared options can be passed to Bun.build to run the plain CLI without plugins or package metadata.
+     */
+    @Test
+    void buildFromBundleOptions() {
+        BundleOption option = new BundleOption().entry("src/index.ts").outdir("dist");
+        Bun.build(option);
+    }
+
+    /**
      * Bundle a library into JavaScript and CSS with type declarations and a package.json exposing the exports. React, Svelte and Vue are detected automatically from package.json and source files; they can also be selected explicitly with Framework.
      */
     @Test

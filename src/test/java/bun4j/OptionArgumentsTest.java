@@ -108,6 +108,86 @@ class OptionArgumentsTest {
     }
 
     @Test
+    void dependencyArguments() {
+        assertTrue(same(List.of("install", "--frozen-lockfile"),
+                new DependencyOption().operation(DependencyOperation.INSTALL).frozenLockfile(true).arguments()));
+        assertTrue(same(List.of("add", "--dev", "--exact", "react@19", "svelte"),
+                new DependencyOption().operation(DependencyOperation.ADD).dev(true).exact(true)
+                        .packageNames("react@19", "svelte").arguments()));
+        assertTrue(same(List.of("remove", "react"),
+                new DependencyOption().operation(DependencyOperation.REMOVE).packageNames("react").arguments()));
+        assertTrue(same(List.of("update", "react"),
+                new DependencyOption().operation(DependencyOperation.UPDATE).packageNames("react").arguments()));
+    }
+
+    @Test
+    void dependencyGlobalLocations() {
+        DependencyOption option = new DependencyOption()
+                .operation(DependencyOperation.INSTALL)
+                .linker(Linker.ISOLATED)
+                .globalStore(true)
+                .cacheDir("D:/bun-cache")
+                .globalDir("D:/bun/global")
+                .globalBinDir("D:/bun/bin")
+                .config("bunfig.toml");
+
+        assertTrue(same(List.of(
+                "install",
+                "--config", "bunfig.toml",
+                "--cache-dir", "D:/bun-cache",
+                "--linker=isolated"
+        ), option.arguments()));
+        assertEquals("1", option.environment().get("BUN_INSTALL_GLOBAL_STORE"));
+        assertEquals("D:/bun/global", option.environment().get("BUN_INSTALL_GLOBAL_DIR"));
+        assertEquals("D:/bun/bin", option.environment().get("BUN_INSTALL_BIN"));
+    }
+
+    @Test
+    void checkArguments() {
+        CheckOption option = new CheckOption()
+                .path("src/index.ts")
+                .project("tsconfig.json")
+                .build(true)
+                .noPretty(true)
+                .compilerOption("strict", null)
+                .compilerOption("target", "es2022");
+
+        assertTrue(same(List.of(
+                "check", "src/index.ts",
+                "--no-script",
+                "--project", "tsconfig.json",
+                "--build",
+                "--no-pretty",
+                "--strict",
+                "--target", "es2022"
+        ), option.arguments()));
+    }
+
+    @Test
+    void testArguments() {
+        TestOption option = new TestOption()
+                .path("test/**/*.test.ts")
+                .timeout(1000)
+                .coverage(true)
+                .coverageReporter("text")
+                .bail(2)
+                .namePattern("add")
+                .reporter("junit")
+                .reporterOutfile("out.xml");
+
+        assertTrue(same(List.of(
+                "test", "test/**/*.test.ts",
+                "--timeout", "1000",
+                "--coverage",
+                "--coverage-reporter", "text",
+                "--bail", "2",
+                "--test-name-pattern", "add",
+                "--reporter", "junit",
+                "--reporter-outfile", "out.xml"
+        ), option.arguments()));
+    }
+
+    @Test
     void formatArguments() {
         FormatOption option = new FormatOption()
                 .path("src", "test/**/*.ts")

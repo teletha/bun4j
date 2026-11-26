@@ -192,6 +192,17 @@ public final class Bun {
     }
 
     /**
+     * Runs {@code bun build} with the shared options of a library bundle, without plugin
+     * installation, generated scripts or package.json generation.
+     *
+     * @param option The shared options.
+     * @return The command result.
+     */
+    public static Result build(BundleOption option) {
+        return run(option);
+    }
+
+    /**
      * Runs {@code bun lint} with the default options.
      *
      * @return The command result.
@@ -242,6 +253,94 @@ public final class Bun {
 
     public static Result format(FormatOption option) {
         return run(option);
+    }
+
+    /**
+     * Type checks the project with {@code bun check}.
+     *
+     * @return The command result.
+     */
+    public static Result check() {
+        return check(new CheckOption());
+    }
+
+    public static Result check(Function<CheckOption, CheckOption> configurator) {
+        return check(configure(configurator, new CheckOption()));
+    }
+
+    public static Result check(CheckOption option) {
+        return run(option);
+    }
+
+    /**
+     * Runs tests with {@code bun test}.
+     *
+     * @return The command result.
+     */
+    public static Result test() {
+        return test(new TestOption());
+    }
+
+    public static Result test(Function<TestOption, TestOption> configurator) {
+        return test(configure(configurator, new TestOption()));
+    }
+
+    public static Result test(TestOption option) {
+        return run(option);
+    }
+
+    /**
+     * Installs the dependencies declared in package.json.
+     *
+     * @return The command result.
+     */
+    public static Result installDependencies() {
+        return installDependencies(option -> option);
+    }
+
+    public static Result installDependencies(Function<DependencyOption, DependencyOption> configurator) {
+        return run(configure(configurator, new DependencyOption().operation(DependencyOperation.INSTALL)));
+    }
+
+    /**
+     * Adds packages to package.json and installs them.
+     *
+     * @param packages Package specifiers.
+     * @return The command result.
+     */
+    public static Result add(String... packages) {
+        return add(option -> option.packageNames(packages));
+    }
+
+    public static Result add(Function<DependencyOption, DependencyOption> configurator) {
+        return run(configure(configurator, new DependencyOption().operation(DependencyOperation.ADD)));
+    }
+
+    /**
+     * Removes packages from package.json and the installation.
+     *
+     * @param packages Package names.
+     * @return The command result.
+     */
+    public static Result remove(String... packages) {
+        return remove(option -> option.packageNames(packages));
+    }
+
+    public static Result remove(Function<DependencyOption, DependencyOption> configurator) {
+        return run(configure(configurator, new DependencyOption().operation(DependencyOperation.REMOVE)));
+    }
+
+    /**
+     * Updates installed dependencies within their declared version ranges.
+     *
+     * @return The command result.
+     */
+    public static Result updateDependencies() {
+        return updateDependencies(option -> option);
+    }
+
+    public static Result updateDependencies(Function<DependencyOption, DependencyOption> configurator) {
+        return run(configure(configurator, new DependencyOption().operation(DependencyOperation.UPDATE)));
     }
 
     /**

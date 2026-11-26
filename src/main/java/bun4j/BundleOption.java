@@ -14,9 +14,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.EnumSet;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.regex.Pattern;
 
@@ -29,48 +27,24 @@ import java.util.regex.Pattern;
  * generation and CSS extraction.
  * </p>
  */
-public class BundleOption extends Option<BundleOption> {
+public class BundleOption extends BuildConfig<BundleOption> {
 
-    private final List<String> entries = new ArrayList();
-    private final List<String> external = new ArrayList();
     private final List<String> plugins = new ArrayList();
-    private final Map<String, String> define = new LinkedHashMap();
     private final Set<Framework> frameworks = EnumSet.noneOf(Framework.class);
 
     /** The project directory used to detect frameworks when none are specified. */
     private Path projectDirectory;
 
-    private String outdir = "dist";
     private String packageName;
-    private Target target = Target.BROWSER;
-    private ModuleFormat format = ModuleFormat.ESM;
-    private SourceMap sourcemap;
-    private boolean minify;
-    private boolean splitting = true;
-    private boolean dts;
-    private boolean check;
     private boolean installPlugins = true;
     private boolean generatePackageJson;
     private boolean keepScript;
 
-    /**
-     * Adds an entrypoint of the library.
-     *
-     * @param paths Entrypoint paths.
-     * @return Chainable API.
-     */
-    public BundleOption entry(String... paths) {
-        for (String path : paths) {
-            if (path != null && !path.isBlank()) {
-                entries.add(path);
-            }
-        }
-        return this;
-    }
-
-    public BundleOption outdir(String path) {
-        this.outdir = path;
-        return this;
+    {
+        outdir("dist");
+        target(Target.BROWSER);
+        format(ModuleFormat.ESM);
+        splitting(true);
     }
 
     /**
@@ -81,41 +55,6 @@ public class BundleOption extends Option<BundleOption> {
      */
     public BundleOption packageName(String name) {
         this.packageName = name;
-        return this;
-    }
-
-    public BundleOption target(Target target) {
-        this.target = target;
-        return this;
-    }
-
-    public BundleOption format(ModuleFormat format) {
-        this.format = format;
-        return this;
-    }
-
-    public BundleOption sourcemap(SourceMap sourcemap) {
-        this.sourcemap = sourcemap;
-        return this;
-    }
-
-    public BundleOption minify(boolean enabled) {
-        this.minify = enabled;
-        return this;
-    }
-
-    public BundleOption splitting(boolean enabled) {
-        this.splitting = enabled;
-        return this;
-    }
-
-    public BundleOption dts(boolean enabled) {
-        this.dts = enabled;
-        return this;
-    }
-
-    public BundleOption check(boolean enabled) {
-        this.check = enabled;
         return this;
     }
 
@@ -146,28 +85,6 @@ public class BundleOption extends Option<BundleOption> {
                 plugins.add(specifier);
             }
         }
-        return this;
-    }
-
-    public BundleOption external(String... modules) {
-        for (String module : modules) {
-            if (module != null && !module.isBlank()) {
-                external.add(module);
-            }
-        }
-        return this;
-    }
-
-    /**
-     * Defines a compile time constant. The replacement is written verbatim as a JavaScript
-     * expression.
-     *
-     * @param identifier A global identifier such as {@code process.env.NODE_ENV}.
-     * @param javascriptExpression A JavaScript expression such as {@code "\"production\""}.
-     * @return Chainable API.
-     */
-    public BundleOption define(String identifier, String javascriptExpression) {
-        this.define.put(identifier, javascriptExpression);
         return this;
     }
 
@@ -338,14 +255,19 @@ public class BundleOption extends Option<BundleOption> {
     }
 
     /**
-     * {@inheritDoc}
+     * Builds the low level CLI arguments from the shared options. This is used when the same option
+     * object is passed to {@link Bun#build(BundleOption)}.
+     *
+     * @return A list of arguments for {@code bun build}.
      */
     @Override
     public List<String> arguments() {
         List<String> arguments = new ArrayList();
-        arguments.add("bundle");
+        arguments.add("build");
         arguments.addAll(entries);
-        value(arguments, "--outdir", outdir);
+        headerArguments(arguments);
+        flagArguments(arguments);
+        definedArguments(arguments);
         arguments.addAll(extra);
         return arguments;
     }
