@@ -12,7 +12,7 @@ import static bee.api.License.*;
 
 public class Project extends bee.api.Project {
     {
-        product("io.github.teletha", "bun4j", "1.0");
+        product("io.github.teletha", "bun4j", ref("version.txt"));
         describe("""
                 Bun4j operates Bun from Java. It installs and updates bun locally, runs its build, lint and format commands, and bundles TypeScript, React, Svelte and Vue libraries into JavaScript and CSS which can be consumed from external projects.
 
